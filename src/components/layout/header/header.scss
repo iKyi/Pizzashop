@@ -1,0 +1,71 @@
+@import "../../../colors.scss";
+header {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    background-color: $dark2;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.9);
+    .logoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        img {
+            max-width: 140px;
+        }
+    }
+    .rSide {
+        align-items: center;
+        padding-left: 20px;
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        .sectionsContainer {
+            .sectionsList {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                li {
+                    margin-right: 10px;
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+    .navContainer {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .nav-entry {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 14px;
+            background: none;
+            border: none;
+            border-right: 1px solid #fff;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.2s;
+            svg {
+                margin-right: 0.3rem;
+            }
+            &:hover {
+                background-color: $light;
+                color: $dark2;
+            }
+        }
+        .nav-entry:last-of-type {
+            border-right: 0;
+        }
+    }
+}

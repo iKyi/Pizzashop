@@ -1,0 +1,37 @@
+.gridItemInner {
+    .prodImageDiv {
+        min-height: 200px;
+    }
+    .itemData {
+        border-top: 1px solid #7b8586cf;
+        width: 100%;
+        table-layout: fixed;
+        .priceName {
+            td {
+                padding: 6px 3px;
+            }
+            td:first-of-type {
+                text-transform: capitalize;
+            }
+            td:last-of-type {
+                text-align: right;
+            }
+        }
+        .descBox {
+            td {
+                padding: 6px 3px;
+                vertical-align: top;
+            }
+        }
+    }
+    .itemOptions {
+        width: 100%;
+        table-layout: fixed;
+    }
+}
+.gridItem {
+    display: none;
+    &.active {
+        display: block;
+    }
+}

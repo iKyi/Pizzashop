@@ -1,0 +1,334 @@
+[
+    {
+        "name": "products",
+        "data": [
+            {
+                "id": 1,
+                "type": "pizza",
+                "image": "https://i.imgur.com/FNOOQB5.jpg",
+                "subtype": "classic",
+                "name": "pizza 1",
+                "price": 3
+            },
+            {
+                "id": 2,
+                "type": "pizza",
+                "image": "https://i.imgur.com/rZ8rIuo.jpg",
+                "subtype": "classic",
+                "name": "pizza 2",
+                "price": 3.5
+            },
+            {
+                "id": 3,
+                "type": "pizza",
+                "image": "https://i.imgur.com/YtkgT6Q.jpg",
+                "subtype": "classic",
+                "name": "pizza 3",
+                "price": 3.2
+            },
+            {
+                "id": 4,
+                "type": "side",
+                "subtype": "classic",
+                "image" : "https://www.superhealthykids.com/wp-content/uploads/2014/11/Spaghetti-Squash-side-dish-from-super-healthy-kids-745x493.jpg",
+                "name": "side 1",
+                "price": 2
+            },
+            {
+                "id": 5,
+                "type": "side",
+                "subtype": "classic",
+                "image" : "https://www.superhealthykids.com/wp-content/uploads/2014/11/baked-onion-rings-from-super-healthy-kids-745x564.png",
+                "name": "side 2",
+                "price": 2.1
+            },
+            {
+                "id": 6,
+                "type": "side",
+                "subtype": "classic",
+                "image" : "https://www.superhealthykids.com/wp-content/uploads/2019/11/brown-sugar-asparagus-06-640-square.jpg",
+                "name": "side 3",
+                "price": 2.8
+            },
+            {
+                "id": 7,
+                "type": "burger",
+                "image": "https://i.imgur.com/W5Fwfiq.jpg",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 8,
+                "type": "burger",
+                "image": "https://i.imgur.com/okmfklK.jpg",
+                "subtype": "vegan",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 9,
+                "type": "burger",
+                "image": "https://i.imgur.com/P2oAnMP.jpg",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 10,
+                "type": "burger",
+                "image": "https://i.imgur.com/ZqF7KWI.jpg",
+                "subtype": "vegetarian",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 11,
+                "type": "burger",
+                "image": "https://i.imgur.com/LpKhR6O.jpg",
+                "subtype": "vegan",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 12,
+                "type": "burger",
+                "image": "https://i.imgur.com/Y5Q3MUQ.jpg",
+                "subtype": "vegan",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 13,
+                "type": "burger",
+                "image": "https://i.imgur.com/DLhl7SN.jpg",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 14,
+                "type": "burger",
+                "image": "https://i.imgur.com/7MgsLDv.jpg",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 15,
+                "type": "burger",
+                "image": "https://i.imgur.com/mQ8sq3m.jpg",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 16,
+                "type": "burger",
+                "image": "https://i.imgur.com/XUvqsUm.png",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 17,
+                "type": "burger",
+                "image": "https://i.imgur.com/dBXpW2c.png",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 18,
+                "type": "burger",
+                "image": "https://i.imgur.com/WAW9hRb.png",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 19,
+                "type": "burger",
+                "image": "https://i.imgur.com/hBvh8Vv.jpg",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 20,
+                "type": "burger",
+                "image": "https://i.imgur.com/4h0EC5C.jpg",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 21,
+                "type": "burger",
+                "image": "https://i.imgur.com/R2I0U05.jpg",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 22,
+                "type": "burger",
+                "image": "https://i.imgur.com/rgYwUl2.jpg",
+                "subtype": "classic",
+                "name": "burger",
+                "price": 2.8
+            },
+            {
+                "id": 23,
+                "type": "dessert",
+                "image": "https://i.imgur.com/tFS93yB.jpg",
+                "subtype": "classic",
+                "name": "ice cream",
+                "price": 2.8
+            },
+            {
+                "id": 23,
+                "type": "dessert",
+                "image": "https://i.imgur.com/jCpxyPM.jpg",
+                "subtype": "classic",
+                "name": "ice cream",
+                "price": 2.8
+            },
+            {
+                "id": 23,
+                "type": "dessert",
+                "image": "https://i.imgur.com/sWGdJ16.gif",
+                "subtype": "classic",
+                "name": "ice cream",
+                "price": 2.8
+            },
+            {
+                "id": 23,
+                "type": "dessert",
+                "image": "https://i.imgur.com/VWhw0iz.jpg",
+                "subtype": "vegan",
+                "name": "ice cream",
+                "price": 2.8
+            },
+            {
+                "id": 23,
+                "type": "dessert",
+                "image": "https://i.imgur.com/mC83fDN.jpg",
+                "subtype": "vegan",
+                "name": "ice cream",
+                "price": 2.8
+            },
+            {
+                "id": 24,
+                "type": "dessert",
+                "image": "https://i.imgur.com/tfzfflu.jpg",
+                "subtype": "classic",
+                "name": "ice cream",
+                "price": 2.8
+            },
+            {
+                "id": 25,
+                "type": "side",
+                "image": "https://i.imgur.com/5dDSc02.jpg",
+                "subtype": "classic",
+                "name": "fries",
+                "price": 2.8
+            },
+            {
+                "id": 26,
+                "type": "side",
+                "image": "https://i.imgur.com/dcdqhL6.jpg",
+                "subtype": "classic",
+                "name": "fries",
+                "price": 2.8
+            },
+            {
+                "id": 27,
+                "type": "dessert",
+                "image": "https://i.imgur.com/U6NEK5k.jpg",
+                "subtype": "classic",
+                "name": "snack",
+                "price": 2.8
+            },
+            {
+                "id": 28,
+                "type": "side",
+                "image": "https://i.imgur.com/0XfinRi.jpg",
+                "subtype": "classic",
+                "name": "onion ring",
+                "price": 2.8
+            },
+            {
+                "id": 29,
+                "type": "side",
+                "image": "https://i.imgur.com/hq7Lj0j.jpg",
+                "subtype": "vegan",
+                "name": "onion ring",
+                "price": 2.8
+            },
+            {
+                "id": 30,
+                "type": "side",
+                "image": "https://i.imgur.com/3Yvre.jpg",
+                "subtype": "classic",
+                "name": "onion ring",
+                "price": 2.8
+            },
+            {
+                "id": 31,
+                "type": "side",
+                "image": "https://i.imgur.com/1w99MFF.jpg",
+                "subtype": "classic",
+                "name": "onion ring",
+                "price": 2.8
+            },
+            {
+                "id": 32,
+                "type": "side",
+                "image": "https://i.imgur.com/QhyWYlY.jpg",
+                "subtype": "classic",
+                "name": "onion ring",
+                "price": 2.8
+            },
+            {
+                "id": 33,
+                "type": "side",
+                "image": "https://i.imgur.com/xKdSQ4w.jpg",
+                "subtype": "classic",
+                "name": "onion ring",
+                "price": 2.8
+            },
+            {
+                "id": 34,
+                "type": "side",
+                "image": "https://i.imgur.com/Fp0aenH.jpg",
+                "subtype": "classic",
+                "name": "onion ring",
+                "price": 2.8
+            }
+        ]
+    },
+    {
+        "name": "sections",
+        "entries": [
+            {
+                "id": 1,
+                "name": "pizzas",
+                "types": "pizza"
+            },
+            {
+                "id": 2,
+                "name": "sides",
+                "types": "side"
+            },{
+                "id": 3,
+                "name": "burgers",
+                "types":"burger"
+            },{
+                "id" : 4,
+                "name": "desserts",
+                "types": "dessert"
+            }
+        ]
+    }
+]
