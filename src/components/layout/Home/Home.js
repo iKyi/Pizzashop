@@ -283,10 +283,28 @@ function Home(props) {
     });
     return data;
   }
+  
+  const PizzaList = ({pizzaList}) => pizzaList.map((pizza, index) =>
+      <PizzaEntry key={index} data={pizza} />
+    );
+  
+  const PizzaView = () =>
+      <>
+        <h2 className="sectionTitle" id="pizzas">
+          Pizzas
+        </h2>
+        <PizzaList
+            pizzaList={pizzas}
+        />
+      </>
+  
+  
   return (
     <div className="container-fluid p-0">
       <div className="container p-0">
-        <div className="prodRow">{renderContent()}</div>
+        <div className="prodRow">
+          <PizzaView/>
+        </div>
       </div>
     </div>
   );
