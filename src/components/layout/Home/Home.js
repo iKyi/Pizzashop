@@ -260,29 +260,6 @@ function Home(props) {
   //console.log(testobj);
   const products = testobj.products.iv;
   const pizzas = products.filter((item) => item.type === "pizza");
-  console.log(pizzas);
-  function renderContent(filter) {
-    var arePizzas = false;
-    var areSides = false;
-    var data = products.map((product, index) => {
-      if (product.type === "pizza") {
-        const obj = <PizzaEntry key={index} data={product} />;
-        const title = (
-          <h2  key={`title${index}`} className="sectionTitle" id="pizzas">
-            Pizzas
-          </h2>
-        );
-        if (arePizzas === false) {
-          arePizzas = true;
-          console.log(arePizzas);
-          return [title, obj];
-        }
-        return obj;
-        
-      }
-    });
-    return data;
-  }
   
   const PizzaList = ({pizzaList}) => pizzaList.map((pizza, index) =>
       <PizzaEntry key={index} data={pizza} />
