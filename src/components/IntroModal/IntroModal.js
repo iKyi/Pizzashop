@@ -71,7 +71,7 @@ export default function IntroModal() {
                     href="http://letmegooglethat.com/?q=how+do+i+make+better+decisions+in+life"
                     className="btn red"
                   >
-                    Against my better judgement, leave.
+                    Against my better judgement, leavee.
                   </a>
                 </div>
                 <div>
