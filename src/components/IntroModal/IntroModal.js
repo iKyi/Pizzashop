@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
+import './intromodal.scss';
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
@@ -71,7 +72,7 @@ export default function IntroModal() {
                     href="http://letmegooglethat.com/?q=how+do+i+make+better+decisions+in+life"
                     className="btn red"
                   >
-                    Against my better judgement, leavee.
+                    Against my better judgement, leave.
                   </a>
                 </div>
                 <div>
