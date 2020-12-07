@@ -13,12 +13,12 @@ function buildUrl(url) {
   const result = `${CONFIG.url}/${url}`;
   return result;
 }
-export const AddToCart = (id) => async (dispatch) => {
-  const response = await local.get("");
-  var alldata = response.data;
-  var products = alldata.find((item) => item.name === "products");
-  var product = products.data.find((item) => item.id === id);
+export const AddToCart = (product) => async (dispatch) => {
   dispatch({ type: "ADD_CART", payload: product });
+};
+export const setCart = () => async (dispatch) => {
+  const localCart = JSON.parse(localStorage.getItem("cart"));
+  dispatch({ type: "SET_CART_INIT", payload: localCart || [] });
 };
 export const RemoveCart = (id) => async (dispatch) => {
   const response = await local.get("");
@@ -27,29 +27,42 @@ export const RemoveCart = (id) => async (dispatch) => {
   var product = products.data.find((item) => item.id === id);
   dispatch({ type: "REMOVE_CART", payload: product });
 };
-export const fetchData = () => async (dispatch) => {
-  const response = await getContent(`api/content/${CONFIG.appName}/data`);
+export const fetchData = (preData) => async (dispatch) => {
+  return new Promise(async (resolve) => {
+    if (preData) {
+      setTimeout(() => {
+        dispatch({ type: "FETCH_TOPPINGS", payload: preData.toppings.iv });
+        dispatch({ type: "FETCH_SIZES", payload: preData.pizzaSizes.iv });
+        dispatch({ type: "FETCH_DIPS", payload: preData.dips.iv });
+        dispatch({ type: "FETCH_CRUSTS", payload: preData.crustVariants.iv });
+        dispatch({ type: "FETCH_PRODUCTS", payload: preData.products.iv });
+        resolve(true);
+      }, 0);
+    } else {
+      const response = await getContent(`api/content/${CONFIG.appName}/data`);
+      if (response.status !== 200) {
+        resolve(false);
+      }
+      const base = response.data.items[0].data;
+      console.log(base)
+      const products = base.products.iv;
+      const toppings = base.toppings.iv;
+      const pizzaSizes = base.pizzaSizes.iv;
+      const crustVariants = base.crustVariants.iv;
+      const dips = base.dips.iv;
 
-  if (response.status !== 200) {
-    return false;
-  }
-  const base = response.data.items[0].data;
-  console.log(base);
-  const products = base.products.iv;
-  const toppings = base.toppings.iv;
-  const pizzaSizes = base.pizzaSizes.iv;
-  const crustVariants = base.crustVariants.iv;
-  const dips = base.dips.iv;
-  dispatch({ type: "FETCH_PRODUCTS", payload: products });
-  dispatch({ type: "FETCH_TOPPINGS", payload: toppings });
-  dispatch({ type: "FETCH_SIZES", payload: pizzaSizes });
-  dispatch({ type: "FETCH_DIPS", payload: dips });
-  dispatch({ type: "FETCH_CRUSTS", payload: crustVariants });
-  return true;
+      
+      dispatch({ type: "FETCH_SIZES", payload: pizzaSizes });
+      dispatch({ type: "FETCH_PRODUCTS", payload: products });
+      dispatch({ type: "FETCH_TOPPINGS", payload: toppings });
+      dispatch({ type: "FETCH_DIPS", payload: dips });
+      dispatch({ type: "FETCH_CRUSTS", payload: crustVariants });
+      resolve(true);
+    }
+  });
 };
 export const fetchProducts = (list) => async (dispatch) => {
   dispatch({ type: "FETCH_PRODUCTS", payload: list });
-  console.log("products are setttt");
 };
 export const fetchToppings = (list) => async (dispatch) => {
   dispatch({ type: "FETCH_TOPPINGS", payload: list });
@@ -63,7 +76,6 @@ export const fetchDips = (list) => async (dispatch) => {
 export const fetchCrusts = (list) => async (dispatch) => {
   dispatch({ type: "FETCH_CRUSTS", payload: list });
 };
-
 // export const FetchSections = () => async (dispatch) => {
 //   const json = await getContent(`api/content/${CONFIG.appName}/sections`);
 //   const items = json.data.items;
@@ -143,3 +155,12 @@ async function getContentInternal(url, retry) {
   }
   return await response;
 }
+export const SetStore = (store) => async (dispatch) => {
+  const theStore = store;
+  if (theStore) {
+    localStorage.setItem("store", JSON.stringify(theStore));
+  } else {
+    localStorage.removeItem("store");
+  }
+  dispatch({ type: "SET_STORE", payload: theStore });
+};

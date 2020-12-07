@@ -4,7 +4,17 @@ header {
     align-items: center;
     padding: 7px;
     background-color: $dark2;
-    box-shadow: 0px 3px 3px rgba(0,0,0,0.9);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    @media only screen and (max-width: 1024px) {
+        .signInButton {
+            display: none !important;
+        }
+    }
+
     .logoContainer {
         display: flex;
         justify-content: center;
@@ -18,7 +28,6 @@ header {
     }
     .rSide {
         align-items: center;
-        padding-left: 20px;
         flex: 1;
         display: flex;
         justify-content: space-between;
@@ -45,7 +54,8 @@ header {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        .nav-entry {
+        a.nav-entry,
+        button.nav-entry {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -60,12 +70,31 @@ header {
                 margin-right: 0.3rem;
             }
             &:hover {
+                text-decoration: none;
                 background-color: $light;
                 color: $dark2;
             }
+            &.nob {
+                border-right: 0;
+            }
         }
-        .nav-entry:last-of-type {
-            border-right: 0;
-        }
+    }
+}
+
+.cartButton {
+    position: relative;
+    small {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -10px;
+        right: -10px;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        background-color: $red;
+        color: #fff;
+        text-shadow: 1px 1px 2px black;
     }
 }

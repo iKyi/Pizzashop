@@ -5,6 +5,7 @@ import toppingsReducer from "./toppingsReducer";
 import sizesReducer from "./sizesReducer";
 import dipsReducer from "./dipsReducer";
 import crustsReducer from "./crustsReducer";
+import StoreReducer from './StoreReducer';
 /// def starts here
 export default combineReducers({
   products: productsReducer,
@@ -13,4 +14,5 @@ export default combineReducers({
   sizes: sizesReducer,
   dips: dipsReducer,
   crusts: crustsReducer,
+  store: StoreReducer
 });

@@ -5,14 +5,16 @@
     top: 0;
     right: -324px;
     height: 100%;
-    max-width: 320px;
-    min-width: 320px;
+    width: 320px;
+    max-width: 100%;
     background-color: #fff;
     -webkit-box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.55);
     -moz-box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.55);
     box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.55);
     transition: all 0.2s;
     z-index: 100;
+    display: flex;
+    flex-direction: column;
     .cartHeader {
         display: flex;
         align-items: center;
@@ -42,6 +44,31 @@
         margin-bottom: 7px;
         padding: 0 0 7px 0;
     }
+    .cartFooter {
+        margin-top: auto;
+        border-top: 1px solid $gray;
+        padding-top: 5px;
+        font-size: 16px;
+        .totalBox {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+        }
+        .minSpendBox {
+            color: $orange;
+            text-align: center;
+            padding: 3px 0;
+        }
+        .proceedBox {
+            &.inactive {
+                pointer-events: none;
+                button {
+
+                    background-color: $gray !important;
+                }
+            }
+        }
+    }
     &.active {
         right: 0;
     }
@@ -49,6 +76,8 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        flex: 1;
+        overflow: auto;
         .cartEntry {
             table {
                 table-layout: fixed;
@@ -66,16 +95,26 @@
                             display: flex;
                             align-items: center;
                             flex-wrap: wrap;
-                            > div {
+                            > .head {
                                 width: 100%;
                                 display: flex;
                                 align-items: center;
                             }
                             .amount {
+                                font-size: 14px;
+                                margin: 0 5px;
+                                small {
+                                    font-weight: 300;
+                                }
                             }
                             .name {
+                                font-size: 18px;
+                                line-height: 18px;
                             }
                             .price {
+                                font-size: 18px;
+                                margin-right: 5px;
+                                margin-left: auto;
                             }
                             .type {
                             }
@@ -88,3 +127,5 @@
         }
     }
 }
+
+
