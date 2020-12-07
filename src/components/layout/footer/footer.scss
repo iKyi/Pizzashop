@@ -1,2 +1,11 @@
 @import '../../../colors';
 
+footer {
+    text-align: center;
+    font-size: 16px;
+    a {
+        color :#fff;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}

@@ -551,7 +551,7 @@ function App(props) {
   useEffect(() => {
     const storagestore = JSON.parse(localStorage.getItem("store"));
     SetStore(storagestore);
-    fetchData(testobj).then((resp) => {
+    fetchData().then((resp) => {
       if (resp) {
         setLoaded(true);
       }
