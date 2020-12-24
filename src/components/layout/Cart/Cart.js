@@ -94,7 +94,7 @@ function Cart(props) {
                 <span>Total:</span>
                 <span>{cartTotal}$</span>
               </div>
-              {cartTotal < store.minSpend && (
+              {store && cartTotal < store.minSpend && (
                 <div className="minSpendBox">
                   {(store.minSpend - cartTotal).toFixed(2)}$ below minimum
                   spending amount.
@@ -103,7 +103,7 @@ function Cart(props) {
 
               <div
                 className={`proceedBox ${
-                  cartTotal < props.store.minSpend ? "inactive" : ""
+                  props.store && cartTotal < props.store.minSpend ? "inactive" : ""
                 }`}
               >
                 <button onClick={(e) => goToCheck()} className="btn green">
