@@ -27,7 +27,7 @@ function Home(props) {
     var areDesserts = false;
     var data = products.map((product, index) => {
       if (product.type === "pizza") {
-        const obj = <ProductEntry key={index} data={product} sizes={psizes} />;
+        const obj = <ProductEntry key={index} data={product} sizes={psizes}  timing={index} />;
         const title = (
           <h2 key={`title${index}`} className="sectionTitle" id="pizzas">
             Pizzas
@@ -41,7 +41,7 @@ function Home(props) {
       }
       if (product.type === "side") {
         const obj = (
-          <ProductEntry key={index} data={product} dips={props.dips} />
+          <ProductEntry key={index} data={product} dips={props.dips}   timing={index}/>
         );
         const title = (
           <h2 key={`title${index}`} className="sectionTitle" id="sides">
@@ -55,7 +55,7 @@ function Home(props) {
         return obj;
       }
       if (product.type === "dessert") {
-        const obj = <ProductEntry key={index} data={product} />;
+        const obj = <ProductEntry key={index} data={product}   timing={index}/>;
         const title = (
           <h2 key={`title${index}`} className="sectionTitle" id="desserts">
             Desserts
@@ -68,7 +68,7 @@ function Home(props) {
         return obj;
       }
       if (product.type === "burger") {
-        const obj = <ProductEntry key={index} data={product} />;
+        const obj = <ProductEntry key={index} data={product}  timing={index} />;
         const title = (
           <h2 key={`title${index}`} className="sectionTitle" id="burgers">
             Burgers
@@ -81,7 +81,7 @@ function Home(props) {
         return obj;
       }
       if (product.type === "drink") {
-        const obj = <ProductEntry key={index} data={product} />;
+        const obj = <ProductEntry key={index} data={product}  timing={index} />;
         const title = (
           <h2 key={`title${index}`} className="sectionTitle" id="drinks">
             Drinks

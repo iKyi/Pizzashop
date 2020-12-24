@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { useHistory, useRouteMatch } from "react-router-dom";
 import { AddToCart } from "../../../../../actions";
 import { useToasts } from "react-toast-notifications";
+import { motion } from "framer-motion";
 function ProductEntry(props) {
   const {
     name,
@@ -67,14 +68,33 @@ function ProductEntry(props) {
     props.AddToCart(prodSend);
   }
   return (
-    <div
+    <motion.div
       onClick={(e) => checkTrigger(e)}
       className="productEntry"
       data-type={prodType}
+      initial={{
+        x: 100,
+        y: -50,
+        scale: 1.2,
+        opacity: 0,
+      }}
+      animate={{
+        x: 0,
+        y: 0,
+        scale: 1,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.3,
+        delay: 0.15 + props.timing * 0.15,
+      }}
     >
       <div className="EntryInner">
         <div className="imageCont">
-          <div className={`image ${type}`} style={{ background: `url(/${image})` }}>
+          <div
+            className={`image ${type}`}
+            style={{ background: `url(/${image})` }}
+          >
             <ul className="paramList">
               {vegetarian && (
                 <li>
@@ -198,7 +218,7 @@ function ProductEntry(props) {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 const mapStateToProps = (state, ownProps) => {
