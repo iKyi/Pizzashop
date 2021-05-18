@@ -1,4 +1,4 @@
-export default (state = null, action) => {
+ const sstate = (state = null, action) => {
     switch (action.type) {
       case "SET_STORE":
         return action.payload;
@@ -7,3 +7,4 @@ export default (state = null, action) => {
     }
   };
   
+  export default sstate;

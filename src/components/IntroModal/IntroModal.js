@@ -3,7 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import './intromodal.scss';
+import { motion } from "framer-motion";
+import "./intromodal.scss";
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
@@ -29,12 +30,13 @@ export default function IntroModal() {
   useEffect(() => {
     const isAgreed = localStorage.getItem("cookieagree");
     if (isAgreed !== "yes") {
-        handleOpen();
+      handleOpen();
     }
     return () => {};
   }, []);
   return (
-    <div>
+    <motion.div
+    >
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -85,6 +87,6 @@ export default function IntroModal() {
           </div>
         </Fade>
       </Modal>
-    </div>
+    </motion.div>
   );
 }

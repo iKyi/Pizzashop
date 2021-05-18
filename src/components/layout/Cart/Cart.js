@@ -39,7 +39,7 @@ function Cart(props) {
             </button>
           </div>
           <ul className="cartListing">
-            {cart.map((item, index) => {
+            {cart[0] ? cart.map((item, index) => {
               return (
                 <li
                   key={index}
@@ -86,7 +86,9 @@ function Cart(props) {
                   </table>
                 </li>
               );
-            })}
+            }) : (
+              <div className="noItems">No goodies in your basket ... yet !</div>
+            )}
           </ul>
           {cartTotal > 0 && (
             <div className="cartFooter">

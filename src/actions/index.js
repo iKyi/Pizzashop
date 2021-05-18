@@ -44,7 +44,6 @@ export const fetchData = (preData) => async (dispatch) => {
         resolve(false);
       }
       const base = response.data.items[0].data;
-      console.log(base)
       const products = base.products.iv;
       const toppings = base.toppings.iv;
       const pizzaSizes = base.pizzaSizes.iv;
@@ -117,7 +116,6 @@ export async function fetchBearerToken() {
     },
   });
   if (!response.status === 200) {
-    console.log(response);
     throw new Error(`Failed to retrieve token, got ${response.statusText}`);
   }
   token = await response.data.access_token;

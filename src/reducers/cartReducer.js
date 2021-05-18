@@ -1,5 +1,5 @@
 import _ from "lodash";
-export default (state = [], action) => {
+const sstate =  (state = [], action) => {
   switch (action.type) {
     case "SET_CART_INIT":
       const cart = action.payload;
@@ -32,3 +32,5 @@ export default (state = [], action) => {
       return state;
   }
 };
+
+export default sstate;

@@ -1,19 +1,19 @@
-@import "../colors.scss";
+@import "./colors.scss";
 //@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet');
 @font-face {
     font-family: "Italian Plate No2";
     font-weight: 400;
-    src: url("../fonts/ItalianPlateNo2-Regular.otf");
+    src: url("./fonts/ItalianPlateNo2-Regular.otf");
 }
 @font-face {
     font-family: "Italian Plate No2";
     font-weight: 700;
-    src: url("../fonts/ItalianPlateNo2-Bold.otf");
+    src: url("./fonts/ItalianPlateNo2-Bold.otf");
 }
 @font-face {
     font-family: "Italian Plate No2";
     font-weight: 900;
-    src: url("../fonts/ItalianPlateNo2-Black.otf");
+    src: url("./fonts/ItalianPlateNo2-Black.otf");
 }
 $mainfont: "Italian Plate No2", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -66,52 +66,52 @@ i {
         width: 40px;
         height: 40px;
         &.SmokedBacon {
-            background-image: url("/toppings/crispy-bacon.svg");
+            background-image: url("./toppings/crispy-bacon.svg");
         }
         &.TripleCheeseBlend {
-            background-image: url("/toppings/3-cheese.png");
+            background-image: url("./toppings/3-cheese.png");
         }
         &.Chicken {
-            background-image: url("/toppings/chicken.svg");
+            background-image: url("./toppings/chicken.svg");
         }
         &.Ham {
-            background-image: url("/toppings/ham.svg");
+            background-image: url("./toppings/ham.svg");
         }
         &.Pepperoni {
-            background-image: url("/toppings/pepperoni.svg");
+            background-image: url("./toppings/pepperoni.svg");
         }
         &.SeasonedMincedBeef {
-            background-image: url("/toppings/minced-beef.png");
+            background-image: url("./toppings/minced-beef.png");
         }
         &.SpicyPork {
-            background-image: url("/toppings/spicy-pork.png");
+            background-image: url("./toppings/spicy-pork.png");
         }
         &.GreenChillies {
-            background-image: url("/toppings/green-chilli.svg");
+            background-image: url("./toppings/green-chilli.svg");
         }
         &.Jalapeños {
-            background-image: url("/toppings/jalapeno.svg");
+            background-image: url("./toppings/jalapeno.svg");
         }
         &.MixedPeppers {
-            background-image: url("/toppings/mixed-pepper.svg");
+            background-image: url("./toppings/mixed-pepper.svg");
         }
         &.Mushrooms {
-            background-image: url("/toppings/mushroom.svg");
+            background-image: url("./toppings/mushroom.svg");
         }
         &.Pineapple {
-            background-image: url("/toppings/pineapple.svg");
+            background-image: url("./toppings/pineapple.svg");
         }
         &.RedOnions {
-            background-image: url("/toppings/red-onion.svg");
+            background-image: url("./toppings/red-onion.svg");
         }
         &.SlicedBlackOlives {
-            background-image: url("/toppings/black-olives.svg");
+            background-image: url("./toppings/black-olives.svg");
         }
         &.Sweetcorn {
-            background-image: url("/toppings/sweetcorn.svg");
+            background-image: url("./toppings/sweetcorn.svg");
         }
         &.Tomato {
-            background-image: url("/toppings/tomato.svg");
+            background-image: url("./toppings/tomato.svg");
         }
     }
 }

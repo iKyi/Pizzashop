@@ -63,7 +63,6 @@
             &.inactive {
                 pointer-events: none;
                 button {
-
                     background-color: $gray !important;
                 }
             }
@@ -126,6 +125,8 @@
             }
         }
     }
+    .noItems {
+        text-align: center;
+        font-size: 1.2rem;
+    }
 }
-
-
